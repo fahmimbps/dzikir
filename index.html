@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Dzikir Pagi & Petang</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-arab { font-family: 'Amiri', serif; line-height: 2; }
+        /* Hide scrollbar for cleaner look if needed */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <header class="fixed top-0 left-0 right-0 z-40 bg-blue-100 shadow-sm transition-all duration-300" id="main-header">
+        <div class="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 id="page-title" class="text-lg font-bold text-slate-700">Dzikir Pagi</h1>
+            
+            <button id="menu-btn" class="text-slate-700 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="w-full bg-blue-200 h-1.5">
+            <div id="progress-bar" class="bg-blue-600 h-1.5 width-0 transition-all duration-100" style="width: 0%"></div>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-50">
+        <div class="absolute inset-0 bg-black/20" id="menu-backdrop"></div>
+        
+        <div class="absolute top-16 right-4 bg-white rounded-lg shadow-xl w-56 overflow-hidden border border-gray-100 animate-fade-in-down">
+            <nav class="flex flex-col">
+                <button onclick="switchPage('pagi')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm">Dzikir Pagi</button>
+                <button onclick="switchPage('petang')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm">Dzikir Petang</button>
+                <button onclick="switchPage('solat')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm font-bold bg-blue-50 border-l-4 border-blue-500">Dzikir Sesudah Solat</button>
+                <button onclick="switchPage('keutamaan')" class="text-left px-4 py-3 hover:bg-blue-50 font-medium text-slate-700 text-sm">Keutamaan Dzikir</button>
+            </nav>
+        </div>
+    </div>
+
+    <main class="max-w-md mx-auto pt-24 pb-10 px-4 min-h-screen">
+        
+        <section id="pagi" class="content-section">
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Ayat Kursi</h3>
+                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
+                    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya)... <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="1" data-ref="HR. Muslim No. 1875">[1]</span>
+                </p>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Surah Al-Ikhlas (3x)</h3>
+                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
+                    قُلْ هُوَ اللَّهُ أَحَدٌ...
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Katakanlah: Dialah Allah, Yang Maha Esa... <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2" data-ref="HR. Abu Daud No. 5082">[2]</span>
+                </p>
+            </article>
+            
+            <div class="h-96"></div>
+            <div class="h-96"></div>
+        </section>
+
+        <section id="petang" class="content-section hidden">
+            <div class="text-center py-10 text-slate-500">Konten Dzikir Petang...</div>
+        </section>
+
+        <section id="solat" class="content-section hidden">
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Istighfar</h3>
+                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
+                    أَسْتَغْفِرُ اللهَ (3x)
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    Aku memohon ampun kepada Allah. <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="3" data-ref="HR. Muslim No. 591">[3]</span>
+                </p>
+            </article>
+            <div class="h-96"></div> </section>
+
+        <section id="keutamaan" class="content-section hidden">
+            <div class="text-center py-10 text-slate-500">Konten Keutamaan Dzikir...</div>
+        </section>
+
+    </main>
+
+    <div id="citation-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center px-4">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="modal-backdrop"></div>
+        
+        <div class="bg-white rounded-lg shadow-2xl w-full max-w-xs relative z-10 transform transition-all scale-100">
+            <div class="flex justify-between items-center p-4 border-b border-gray-100">
+                <h4 class="font-bold text-slate-800" id="modal-title">Sitasi No 1</h4>
+                <button id="close-modal" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <p class="text-slate-700 text-lg font-medium" id="modal-content">HR Muslim No. 1875</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. Logic Menu Hamburger ---
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuBackdrop = document.getElementById('menu-backdrop');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        menuBtn.addEventListener('click', toggleMenu);
+        menuBackdrop.addEventListener('click', toggleMenu);
+
+        // --- 2. Logic Pindah Halaman (SPA) ---
+        const pageTitle = document.getElementById('page-title');
+        const sections = document.querySelectorAll('.content-section');
+        const progressBar = document.getElementById('progress-bar');
+
+        const titles = {
+            'pagi': 'Dzikir Pagi',
+            'petang': 'Dzikir Petang',
+            'solat': 'Dzikir Sesudah Solat',
+            'keutamaan': 'Keutamaan Dzikir'
+        };
+
+        function switchPage(pageId) {
+            // Sembunyikan semua section
+            sections.forEach(sec => sec.classList.add('hidden'));
+            
+            // Tampilkan section yang dipilih
+            document.getElementById(pageId).classList.remove('hidden');
+            
+            // Update Judul Header
+            pageTitle.textContent = titles[pageId];
+            
+            // Reset Scroll ke atas
+            window.scrollTo(0, 0);
+            
+            // Tutup menu
+            toggleMenu();
+        }
+
+        // --- 3. Logic Reading Progress Bar ---
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            // Jika konten pendek (tidak ada scroll), set 100% atau 0% sesuai preferensi
+            if(height <= 0) {
+                progressBar.style.width = "0%";
+            } else {
+                progressBar.style.width = scrolled + "%";
+            }
+        };
+
+        // --- 4. Logic Modal Sitasi ---
+        const modal = document.getElementById('citation-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const triggers = document.querySelectorAll('.citation-trigger');
+
+        // Buka Modal
+        triggers.forEach(trigger => {
+            trigger.addEventListener('click', function() {
+                const id = this.getAttribute('data-id');
+                const ref = this.getAttribute('data-ref');
+                
+                modalTitle.textContent = `Sitasi No ${id}`;
+                modalContent.textContent = ref;
+                
+                modal.classList.remove('hidden');
+            });
+        });
+
+        // Tutup Modal
+        function hideModal() {
+            modal.classList.add('hidden');
+        }
+        
+        closeModal.addEventListener('click', hideModal);
+        modalBackdrop.addEventListener('click', hideModal);
+
+    </script>
+</body>
+</html>
