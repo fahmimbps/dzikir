@@ -36,18 +36,32 @@
     </header>
 
     <div id="mobile-menu" class="hidden fixed inset-0 z-50">
-        <div class="absolute inset-0 bg-black/20" id="menu-backdrop"></div>
-        
-        <div class="absolute top-16 right-4 bg-white rounded-lg shadow-xl w-56 overflow-hidden border border-gray-100 animate-fade-in-down">
-            <nav class="flex flex-col">
-                <button onclick="switchPage('pagi')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm">Dzikir Pagi</button>
-                <button onclick="switchPage('petang')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm">Dzikir Petang</button>
-                <button onclick="switchPage('solat')" class="text-left px-4 py-3 hover:bg-blue-50 border-b border-gray-100 font-medium text-slate-700 text-sm font-bold bg-blue-50 border-l-4 border-blue-500">Dzikir Sesudah Solat</button>
-                <button onclick="switchPage('keutamaan')" class="text-left px-4 py-3 hover:bg-blue-50 font-medium text-slate-700 text-sm">Keutamaan Dzikir</button>
-            </nav>
-        </div>
+    <div class="absolute inset-0 bg-black/20" id="menu-backdrop"></div>
+    
+    <div class="absolute top-16 right-4 bg-white rounded-lg shadow-xl w-64 overflow-hidden border border-gray-100 animate-fade-in-down">
+        <nav class="flex flex-col">
+            <button id="btn-pagi" onclick="switchPage('pagi')" 
+                class="menu-btn text-left px-4 py-3 border-b border-gray-100 text-sm w-full font-bold bg-blue-50 border-l-4 border-blue-500 text-blue-700 transition-colors duration-200">
+                Dzikir Pagi
+            </button>
+            
+            <button id="btn-petang" onclick="switchPage('petang')" 
+                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                Dzikir Petang
+            </button>
+            
+            <button id="btn-solat" onclick="switchPage('solat')" 
+                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                Dzikir Sesudah Solat
+            </button>
+            
+            <button id="btn-keutamaan" onclick="switchPage('keutamaan')" 
+                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                Keutamaan Dzikir
+            </button>
+        </nav>
     </div>
-
+</div>
     <main class="max-w-md mx-auto pt-24 pb-10 px-4 min-h-screen">
         
         <section id="pagi" class="content-section">
@@ -138,23 +152,53 @@
             'keutamaan': 'Keutamaan Dzikir'
         };
 
-        function switchPage(pageId) {
-            // Sembunyikan semua section
-            sections.forEach(sec => sec.classList.add('hidden'));
-            
-            // Tampilkan section yang dipilih
-            document.getElementById(pageId).classList.remove('hidden');
-            
-            // Update Judul Header
-            pageTitle.textContent = titles[pageId];
-            
-            // Reset Scroll ke atas
-            window.scrollTo(0, 0);
-            
-            // Tutup menu
-            toggleMenu();
-        }
+        const menuMap = {
+    'pagi': 'btn-pagi',
+    'petang': 'btn-petang',
+    'solat': 'btn-solat',
+    'keutamaan': 'btn-keutamaan'
+};
 
+function switchPage(pageId) {
+    // 1. Sembunyikan semua konten halaman
+    sections.forEach(sec => sec.classList.add('hidden'));
+    
+    // 2. Tampilkan halaman yang dipilih
+    const activeSection = document.getElementById(pageId);
+    if(activeSection) activeSection.classList.remove('hidden');
+    
+    // 3. Update Judul Header
+    pageTitle.textContent = titles[pageId];
+    
+    // 4. Update Tampilan Menu (Highlight Active)
+    updateMenuHighlight(pageId);
+
+    // 5. Reset Scroll & Tutup Menu
+    window.scrollTo(0, 0);
+    toggleMenu();
+}
+
+function updateMenuHighlight(activePageId) {
+    const allButtons = document.querySelectorAll('.menu-btn');
+    const targetBtnId = menuMap[activePageId];
+
+    // Kelas untuk keadaan AKTIF
+    const activeClasses = ['font-bold', 'bg-blue-50', 'border-blue-500', 'text-blue-700'];
+    // Kelas untuk keadaan TIDAK AKTIF (Normal)
+    const inactiveClasses = ['font-medium', 'text-slate-700', 'hover:bg-gray-50', 'border-transparent'];
+
+    allButtons.forEach(btn => {
+        if (btn.id === targetBtnId) {
+            // Jika ini tombol yang aktif: Tambah style aktif, hapus style normal
+            btn.classList.add(...activeClasses);
+            btn.classList.remove(...inactiveClasses);
+        } else {
+            // Jika bukan: Hapus style aktif, kembalikan ke normal
+            btn.classList.remove(...activeClasses);
+            btn.classList.add(...inactiveClasses);
+        }
+    });
+}
         // --- 3. Logic Reading Progress Bar ---
         window.onscroll = function() {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -197,7 +241,6 @@
         
         closeModal.addEventListener('click', hideModal);
         modalBackdrop.addEventListener('click', hideModal);
-
     </script>
 </body>
 </html>
