@@ -1,119 +1,196 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aplikasi Dzikir Pagi & Petang</title>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .font-arab { font-family: 'Amiri', serif; line-height: 2; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .font-arab {
+            font-family: 'Amiri', serif;
+            line-height: 2;
+        }
+
         /* Hide scrollbar for cleaner look if needed */
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
+
 <body class="bg-gray-50 text-gray-800">
 
     <header class="fixed top-0 left-0 right-0 z-40 bg-blue-100 shadow-sm transition-all duration-300" id="main-header">
         <div class="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
             <h1 id="page-title" class="text-lg font-bold text-slate-700">Dzikir Pagi</h1>
-            
+
             <button id="menu-btn" class="text-slate-700 text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
         <div class="w-full bg-blue-200 h-1.5">
-            <div id="progress-bar" class="bg-blue-600 h-1.5 width-0 transition-all duration-100" style="width: 0%"></div>
+            <div id="progress-bar" class="bg-blue-600 h-1.5 width-0 transition-all duration-100" style="width: 0%">
+            </div>
         </div>
     </header>
 
     <div id="mobile-menu" class="hidden fixed inset-0 z-50">
-    <div class="absolute inset-0 bg-black/20" id="menu-backdrop"></div>
-    
-    <div class="absolute top-16 right-4 bg-white rounded-lg shadow-xl w-64 overflow-hidden border border-gray-100 animate-fade-in-down">
-        <nav class="flex flex-col">
-            <button id="btn-pagi" onclick="switchPage('pagi')" 
-                class="menu-btn text-left px-4 py-3 border-b border-gray-100 text-sm w-full font-bold bg-blue-50 border-l-4 border-blue-500 text-blue-700 transition-colors duration-200">
-                Dzikir Pagi
-            </button>
-            
-            <button id="btn-petang" onclick="switchPage('petang')" 
-                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
-                Dzikir Petang
-            </button>
-            
-            <button id="btn-solat" onclick="switchPage('solat')" 
-                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
-                Dzikir Sesudah Solat
-            </button>
-            
-            <button id="btn-keutamaan" onclick="switchPage('keutamaan')" 
-                class="menu-btn text-left px-4 py-3 hover:bg-gray-50 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
-                Keutamaan Dzikir
-            </button>
-        </nav>
-    </div>
-</div>
-    <main class="max-w-md mx-auto pt-24 pb-10 px-4 min-h-screen">
-        
-        <section id="pagi" class="content-section">
-            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
-                <h3 class="text-sm font-bold text-slate-800 mb-2">Ayat Kursi</h3>
-                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
-                    اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...
-                </p>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya)... <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="1" data-ref="HR. Muslim No. 1875">[1]</span>
-                </p>
-            </article>
+        <div class="absolute inset-0 bg-black/20" id="menu-backdrop"></div>
 
-            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
-                <h3 class="text-sm font-bold text-slate-800 mb-2">Surah Al-Ikhlas (3x)</h3>
-                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
-                    قُلْ هُوَ اللَّهُ أَحَدٌ...
-                </p>
-                <p class="text-sm text-slate-600 leading-relaxed">
-                    Katakanlah: Dialah Allah, Yang Maha Esa... <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2" data-ref="HR. Abu Daud No. 5082">[2]</span>
-                </p>
-            </article>
-            
-            <div class="h-96"></div>
-            <div class="h-96"></div>
+        <div
+            class="absolute top-16 right-4 bg-white rounded-lg shadow-xl w-64 overflow-hidden border border-gray-100 animate-fade-in-down">
+            <nav class="flex flex-col">
+                <button id="btn-pagi" onclick="switchPage('pagi')"
+                    class="menu-btn text-left px-4 py-3 border-b border-gray-100 text-sm w-full font-bold bg-blue-50 border-l-4 border-blue-500 text-blue-700 transition-colors duration-200">
+                    Dzikir Pagi
+                </button>
+
+                <button id="btn-petang" onclick="switchPage('petang')"
+                    class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                    Dzikir Petang
+                </button>
+
+                <button id="btn-solat" onclick="switchPage('solat')"
+                    class="menu-btn text-left px-4 py-3 hover:bg-gray-50 border-b border-gray-100 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                    Dzikir Sesudah Solat
+                </button>
+
+                <button id="btn-keutamaan" onclick="switchPage('keutamaan')"
+                    class="menu-btn text-left px-4 py-3 hover:bg-gray-50 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
+                    Keutamaan Dzikir
+                </button>
+            </nav>
+        </div>
+    </div>
+    <main class="max-w-md mx-auto pt-24 pb-10 px-4 min-h-screen">
+
+        <section id="pagi" class="content-section">            
+            <div class="text-center py-10 text-slate-500">Masih dalam pengembangan...</div>
         </section>
 
-        <section id="petang" class="content-section hidden">
-            <div class="text-center py-10 text-slate-500">Konten Dzikir Petang...</div>
+        <section id="petang" class="content-section hidden">            
+            <div class="text-center py-10 text-slate-500">Masih dalam pengembangan...</div>
         </section>
 
         <section id="solat" class="content-section hidden">
             <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
-                <h3 class="text-sm font-bold text-slate-800 mb-2">Istighfar</h3>
-                <p class="font-arab text-right text-2xl text-slate-900 mb-4">
-                    أَسْتَغْفِرُ اللهَ (3x)
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَسْتَغْفِرُ اللهَ (×٣) اللَّهُمَّ أَنْتَ السَّلاَمُ، وَمِنْكَ السَّلاَمُ، تَبَارَكْتَ يَاذَا الْجَلاَلِ وَالْإِكْرَامِ.
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    Aku memohon ampun kepada Allah. <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="3" data-ref="HR. Muslim No. 591">[3]</span>
+                    “Aku minta ampun kepada Allah, (3x). Ya Allah, Engkau Mahasejahtera, dan dari-Mu kesejahteraan, Mahasuci Engkau, wahai (Rabb) Yang memiliki keagungan dan kemuliaan.” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="3"
+                        data-ref="HR. Muslim (I/414)">[1]</span>
                 </p>
             </article>
-            <div class="h-96"></div> </section>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                   لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، اللَّهُمَّ لاَ مَانِعَ لِمَا أَعْطَيْتَ، وَلاَ مُعْطِيَ لِمَا مَنَعْتَ، وَلاَ يَنْفَعُ ذَا الْجَدِّ مِنْكَ الْجَدُّ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dia Mahakuasa atas segala sesuatu. Ya Allah, tidak ada yang mencegah apa yang Engkau berikan dan tidak ada yang memberi apa yang Engkau cegah. Tidak berguna kekayaan dan kemuliaan itu bagi pemiliknya dari (adzab)-Mu.” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2"
+                        data-ref="HR. Al-Bukhari (I/255) dan Muslim (I/414)">[2]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ ،لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللهِ، لاَ إِلَهَ إِلاَّ اللهُ، وَلاَ نَعْبُدُ إِلاَّ إِيَّاهُ، لَهُ النِّعْمَةُ وَلَهُ الْفَضْلُ وَلَهُ الثَّنَاءُ الْحَسَنُ، لاَ إِلَهَ إِلاَّ اللهُ مُخْلِصِينَ لَهُ الدِّينَ وَلَوْ كَرِهَ الْكَافِرُونَ.                
+</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan pujian. Dia Mahakuasa atas segala sesuatu. Tidak ada daya dan kekuatan kecuali (dengan pertolongan) Allah. Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah. Kami tidak menyembah kecuali kepada-Nya. Bagi-Nya nikmat, anugerah, dan pujian yang baik. Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah, dengan memurnikan ibadah kepada-Nya, sekalipun orang-orang kafir tidak menyukainya." <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="3"
+                        data-ref="HR. Muslim (I/415)">[3]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+سُبْحَانَ اللهِ، وَالْحَمْدُ لِلَّهِ، وَاللهُ أَكْبَرُ (×٣٣) لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.
+</p>                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Mahasuci Allah, segala puji bagi Allah, dan Allah Mahabesar. (33x). Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian. Dan Dia Mahakuasa atas segala sesuatu.” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="4"
+                        data-ref="Barangsiapa membaca kalimat tersebut setiap selesai shalat (fardhu), akan diampuni kesalahannya, sekalipun seperti buih di lautan.” HR. Muslim (I/418).">[4]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Surat al-Ikhlas, al-Falaq dan an-Naas Setiap Selesai Shalat (Fardhu) 1x, kecuali Setelah Shalat Maghrib dan Subuh 3x. <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="5"
+                        data-ref="HR. Abu Dawud (II/86) dan an-Nasa-i (III/68). Lihat pula Shahih at-Tirmidzi (II/8).">[5]</span></h3>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+ بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ۝ قُلْ هُوَ اللَّهُ أَحَدٌ ۝ اللَّهُ الصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُ كُفُوًا أَحَدٌ</p>                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah (Muhammad): ‘Dialah Allah, Yang Maha Esa. Allah Rabb yang bergantung kepada-Nya segala urusan. (Allah) tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu pun yang setara dengan Dia.’” (QS. Al-Ikhlas: 1-4)
+                </p>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ۝ مِن شَرِّ مَا خَلَقَ ۝ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝ وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ ۝ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ</p>                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah: ‘Aku berlindung kepada Rabb Yang Menguasai shubuh, dari kejahatan makhluk-Nya, dan dari kejahatan malam apabila telah gelap gulita, dan dari kejahatan (wanita-wanita) tukang sihir yang meniup pada buhul-buhul (talinya), dan dari kejahatan orang dengki bila ia dengki.’” (QS. Al-Falaq: 1-5)
+                </p>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ قُلْ أَعُوذُ بِرَبِّ النَّاسِ ۝ مَلِكِ النَّاسِ ۝ إِلَهِ النَّاسِ ۝ مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ ۝ الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ ۝ مِنَ الْجِنَّةِ وَالنَّاسِ</p>                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah: ‘Aku berlindung kepada Rabb manusia. Raja manusia. Sembahan manusia. Dari kejahatan (bisikan) syaitan yang bersembunyi, yang membisikkan (kejahatan) ke dalam dada manusia, dari (golongan) jin dan manusia.’” (QS. An-Naas: 1-6)
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Ayat Kursi</h3>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَيُّ الْقَيُّومُ لاَ تَأْخُذُهُ سِنَةٌ وَلاَ نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ ۝٢٥٥</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Allah, tidak ada Ilah (yang berhak diibadahi dengan benar) melainkan Dia Yang Mahahidup, Yang terus-menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur. Milik-Nya apa yang di langit dan apa yang di bumi. Tidak ada yang dapat memberi syafa’at di sisi-Nya tanpa izin-Nya. Dia mengetahui apa yang di hadapan mereka dan di belakang mereka, dan mereka tidak mengetahui sesuatu pun tentang ilmu-Nya melainkan apa yang dikehendaki-Nya. Kursi-Nya meliputi langit dan bumi. Dan Dia tidak merasa berat memelihara keduanya, dan Dia Mahatinggi, Mahabesar.” (QS. Al-Baqarah: 255)<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="6"
+                        data-ref="HR. An-Nasa-i dalam ‘Amalul Yaum wal Lailah (no. 100) dan Ibnu Sunni (no. 121), dinyatakan shahih oleh Syaikh al-Albani dalam Shahih al-Jaami’ (V/339) dan Silsilah al-Ahaadiits ash-Shahiihah (II/697, no. 972).">[6]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Dibaca 10x setiap sesudah shalat Maghrib dan Shubuh<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="7"
+                        data-ref="HR. At-Tirmidzi (V/515) dan Ahmad (IV/227). Untuk takhrij hadits tersebut, lihat di Zaadul Ma’aad (I/300)">[7]</span></h3>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+لاَ إِلَهَ إِلاَّ اللهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya, bagi-Nya kerajaan dan bagi-Nya pujian. Dia-lah yang menghidupkan (orang yang sudah mati atau memberi ruh pada janin yang akan dilahirkan) dan yang mematikan. Dan Dia Mahakuasa atas segala sesuatu.”
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-sm font-bold text-slate-800 mb-2">Dibaca setelah shalat Shubuh <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Ibnu Majah dan ahli hadits yang lain. Lihat kitab Shahih Ibnu Majah (I/152) dan Majmaauz Zawaa-id (X/111).">[8]</span></h3>
+                <p class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah! Sesungguhnya aku mohon kepada-Mu ilmu yang bermanfaat, rizki yang halal, dan amal yang diterima.”
+                </p>
+            </article>
+            <div class="h-96"></div>
+        </section>
 
         <section id="keutamaan" class="content-section hidden">
-            <div class="text-center py-10 text-slate-500">Konten Keutamaan Dzikir...</div>
+            <div class="text-center py-10 text-slate-500">Masih dalam pengembangan...</div>
         </section>
 
     </main>
 
     <div id="citation-modal" class="hidden fixed inset-0 z-[60] flex items-center justify-center px-4">
         <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="modal-backdrop"></div>
-        
+
         <div class="bg-white rounded-lg shadow-2xl w-full max-w-xs relative z-10 transform transition-all scale-100">
             <div class="flex justify-between items-center p-4 border-b border-gray-100">
                 <h4 class="font-bold text-slate-800" id="modal-title">Sitasi No 1</h4>
@@ -153,60 +230,60 @@
         };
 
         const menuMap = {
-    'pagi': 'btn-pagi',
-    'petang': 'btn-petang',
-    'solat': 'btn-solat',
-    'keutamaan': 'btn-keutamaan'
-};
+            'pagi': 'btn-pagi',
+            'petang': 'btn-petang',
+            'solat': 'btn-solat',
+            'keutamaan': 'btn-keutamaan'
+        };
 
-function switchPage(pageId) {
-    // 1. Sembunyikan semua konten halaman
-    sections.forEach(sec => sec.classList.add('hidden'));
-    
-    // 2. Tampilkan halaman yang dipilih
-    const activeSection = document.getElementById(pageId);
-    if(activeSection) activeSection.classList.remove('hidden');
-    
-    // 3. Update Judul Header
-    pageTitle.textContent = titles[pageId];
-    
-    // 4. Update Tampilan Menu (Highlight Active)
-    updateMenuHighlight(pageId);
+        function switchPage(pageId) {
+            // 1. Sembunyikan semua konten halaman
+            sections.forEach(sec => sec.classList.add('hidden'));
 
-    // 5. Reset Scroll & Tutup Menu
-    window.scrollTo(0, 0);
-    toggleMenu();
-}
+            // 2. Tampilkan halaman yang dipilih
+            const activeSection = document.getElementById(pageId);
+            if (activeSection) activeSection.classList.remove('hidden');
 
-function updateMenuHighlight(activePageId) {
-    const allButtons = document.querySelectorAll('.menu-btn');
-    const targetBtnId = menuMap[activePageId];
+            // 3. Update Judul Header
+            pageTitle.textContent = titles[pageId];
 
-    // Kelas untuk keadaan AKTIF
-    const activeClasses = ['font-bold', 'bg-blue-50', 'border-blue-500', 'text-blue-700'];
-    // Kelas untuk keadaan TIDAK AKTIF (Normal)
-    const inactiveClasses = ['font-medium', 'text-slate-700', 'hover:bg-gray-50', 'border-transparent'];
+            // 4. Update Tampilan Menu (Highlight Active)
+            updateMenuHighlight(pageId);
 
-    allButtons.forEach(btn => {
-        if (btn.id === targetBtnId) {
-            // Jika ini tombol yang aktif: Tambah style aktif, hapus style normal
-            btn.classList.add(...activeClasses);
-            btn.classList.remove(...inactiveClasses);
-        } else {
-            // Jika bukan: Hapus style aktif, kembalikan ke normal
-            btn.classList.remove(...activeClasses);
-            btn.classList.add(...inactiveClasses);
+            // 5. Reset Scroll & Tutup Menu
+            window.scrollTo(0, 0);
+            toggleMenu();
         }
-    });
-}
+
+        function updateMenuHighlight(activePageId) {
+            const allButtons = document.querySelectorAll('.menu-btn');
+            const targetBtnId = menuMap[activePageId];
+
+            // Kelas untuk keadaan AKTIF
+            const activeClasses = ['font-bold', 'bg-blue-50', 'border-blue-500', 'text-blue-700'];
+            // Kelas untuk keadaan TIDAK AKTIF (Normal)
+            const inactiveClasses = ['font-medium', 'text-slate-700', 'hover:bg-gray-50', 'border-transparent'];
+
+            allButtons.forEach(btn => {
+                if (btn.id === targetBtnId) {
+                    // Jika ini tombol yang aktif: Tambah style aktif, hapus style normal
+                    btn.classList.add(...activeClasses);
+                    btn.classList.remove(...inactiveClasses);
+                } else {
+                    // Jika bukan: Hapus style aktif, kembalikan ke normal
+                    btn.classList.remove(...activeClasses);
+                    btn.classList.add(...inactiveClasses);
+                }
+            });
+        }
         // --- 3. Logic Reading Progress Bar ---
-        window.onscroll = function() {
+        window.onscroll = function () {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             const scrolled = (winScroll / height) * 100;
-            
+
             // Jika konten pendek (tidak ada scroll), set 100% atau 0% sesuai preferensi
-            if(height <= 0) {
+            if (height <= 0) {
                 progressBar.style.width = "0%";
             } else {
                 progressBar.style.width = scrolled + "%";
@@ -223,13 +300,13 @@ function updateMenuHighlight(activePageId) {
 
         // Buka Modal
         triggers.forEach(trigger => {
-            trigger.addEventListener('click', function() {
+            trigger.addEventListener('click', function () {
                 const id = this.getAttribute('data-id');
                 const ref = this.getAttribute('data-ref');
-                
+
                 modalTitle.textContent = `Sitasi No ${id}`;
                 modalContent.textContent = ref;
-                
+
                 modal.classList.remove('hidden');
             });
         });
@@ -238,9 +315,10 @@ function updateMenuHighlight(activePageId) {
         function hideModal() {
             modal.classList.add('hidden');
         }
-        
+
         closeModal.addEventListener('click', hideModal);
         modalBackdrop.addEventListener('click', hideModal);
     </script>
 </body>
+
 </html>
