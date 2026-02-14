@@ -4,10 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aplikasi Dzikir Pagi & Petang</title>
+    <title>Dzikir Pagi & Petang Sesuai Sunnah</title>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="title" content="Dzikir Pagi & Petang Lengkap Sesuai Sunnah - Aplikasi Web">
+    <meta name="description"
+        content="Aplikasi dzikir pagi dan petang digital praktis sesuai sunnah. Lengkap dengan teks Arab, terjemahan, dan dalil shahih. Gratis, ringan, dan mudah digunakan setiap hari.">
+    <meta name="keywords" content="dzikir pagi petang, dzikir pagi sesuai sunnah, aplikasi dzikir, dzikir petang">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fahmimbps.github.io/dzikir/">
+    <meta property="og:title" content="Dzikir Pagi & Petang Lengkap Sesuai Sunnah">
+    <meta property="og:description"
+        content="Amalkan dzikir pagi dan petang dengan mudah melalui aplikasi web yang ringan dan responsif.">
+    <meta property="og:image" content="https://fahmimbps.github.io/dzikir/icon-192.png">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fahmimbps.github.io/dzikir/">
+    <meta property="twitter:title" content="Dzikir Pagi & Petang Lengkap Sesuai Sunnah">
+    <meta property="twitter:description"
+        content="Amalkan dzikir pagi dan petang dengan mudah melalui aplikasi web yang ringan dan responsif.">
+    <meta property="twitter:image" content="https://fahmimbps.github.io/dzikir/icon-192.png">
+
+    <link rel="canonical" href="https://fahmimbps.github.io/dzikir/" />
+
+    <link href="./output.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3b82f6">
+    <link rel="icon" type="image/png" href="./icon-192.png">
+    <link rel="apple-touch-icon" href="icon-192.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link
@@ -74,9 +99,9 @@
                     Dzikir Sesudah Solat
                 </button>
 
-                <button id="btn-keutamaan" onclick="switchPage('keutamaan')"
+                <button id="btn-tentang" onclick="switchPage('tentang')"
                     class="menu-btn text-left px-4 py-3 hover:bg-gray-50 font-medium text-slate-700 text-sm w-full border-l-4 border-transparent transition-colors duration-200">
-                    Keutamaan Dzikir
+                    Tentang Aplikasi
                 </button>
             </nav>
         </div>
@@ -97,8 +122,7 @@
                     مَا فِي السَّمٰوٰتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ
                     يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا
                     بِمَاشَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَالْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ
-                    الْعَلِيُّ الْعَظِيمُ (٢٥٥)
-
+                    الْعَلِيُّ الْعَظِيمُ۝٢٥٥
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Allah, tidak ada Ilah (yang berhak diibadahi dengan benar) melainkan Dia Yang Mahahidup, Yang
@@ -110,14 +134,15 @@
             </article>
             <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
-                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ 
-                </br>
- قُلْ هُوَ اللّٰهُ أَحَدٌ ﴿١﴾ اللّٰهُ الصَّمَدُ ﴿٢﴾ لَمْ يَلِدْوَلَمْ يُولَدْ ﴿٣﴾ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ ﴿٤﴾ 
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </br>
+                    قُلْ هُوَ اللّٰهُ أَحَدٌ ۝١ اللّٰهُ الصَّمَدُ ۝٢ لَمْ يَلِدْوَلَمْ يُولَدْ ۝٣ وَلَمْ يَكُن لَّهُۥ
+                    كُفُوًا أَحَدٌۢ ۝٤
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Katakanlah (Muhammad): ‘Dia-lah Allah, Yang Maha Esa. Allah Rabb yang bergantung kepada-Nya segala
                     urusan. (Allah) tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu pun yang setara
-                    dengan Dia.’” (QS. Al-Ikhlas: 1-4) (Dibaca 3x) <span
+                    dengan Dia.’” (QS. Al-Ikhlas: 1-4) <b>(Dibaca 3x)</b> <span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="1"
                         data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[1]</span>
                 </p>
@@ -126,27 +151,28 @@
             <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
                     بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
-                </br>
-                    قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ﴿١﴾ مِن شَرِّ مَا خَلَقَ ﴿٢﴾ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ﴿٣﴾ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ ﴿٤﴾ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ﴿٥﴾</p>
+                    </br>
+                    قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ۝١ مِن شَرِّ مَا خَلَقَ ۝٢ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝٣ وَمِن
+                    شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ ۝٤ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ۝٥</p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Katakanlah: ‘Aku berlindung kepada Rabb Yang Menguasai shubuh, dari kejahatan makhluk-Nya, dan dari
                     kejahatan malam apabila telah gelap gulita, dan dari kejahatan (wanita-wanita) tukang sihir yang
                     meniup pada buhul-buhul (talinya), dan dari kejahatan orang dengki bila ia dengki.’” (QS. Al-Falaq:
-                    1-5) (Dibaca 3x) <span
+                    1-5) <b>(Dibaca 3x)</b> <span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2"
                         data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[2]</span>
                 </p>
             </article>
             <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
-                        بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
-                </br>
-                    قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ﴿١﴾ مَلِكِ ٱلنَّاسِ ﴿٢﴾ إِلَٰهِ ٱلنَّاسِ ﴿٣﴾ مِن شَرِّ ٱلْوَسْوَاسِ
-                    ٱلْخَنَّاسِ ﴿٤﴾ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ﴿٥﴾ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ﴿٦﴾</p>
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </br>
+                    قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ۝١ مَلِكِ ٱلنَّاسِ ۝٢ إِلَٰهِ ٱلنَّاسِ ۝٣ مِن شَرِّ ٱلْوَسْوَاسِ
+                    ٱلْخَنَّاسِ ۝٤ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ۝٥ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ۝٦</p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Katakanlah: ‘Aku berlindung kepada Rabb manusia. Raja manusia. Sembahan manusia. Dari kejahatan
                     (bisikan) syaitan yang bersembunyi, yang membisikkan (kejahatan) ke dalam dada manusia, dari
-                    (golongan) jin dan manusia.’” (QS. An-Naas: 1-6) (Dibaca 3x) <span
+                    (golongan) jin dan manusia.’” (QS. An-Naas: 1-6) <b>(Dibaca 3x)</b> <span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2"
                         data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[2]</span>
                 </p>
@@ -205,7 +231,7 @@
                     “Ya Allah, sesungguhnya aku di waktu pagi ini mempersaksikan Engkau, Malaikat yang memikul ‘Arsy-Mu,
                     Malaikat-Malaikat dan seluruh makhluk-Mu, bahwa sesungguhnya Engkau adalah Allah, tidak ada Ilah
                     yang berhak diibadahi dengan benar selain Engkau semata, tidak ada sekutu bagi-Mu dan sesungguhnya
-                    Muhammad adalah hamba dan utusan-Mu.” (Dibaca 4x) <span
+                    Muhammad adalah hamba dan utusan-Mu.” <b>(Dibaca 4x)</b> <span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="6"
                         data-ref="HR. Abu Dawud (IV/317), al-Bukhari dalam Adabul Mufrad (no. 1201), an-Nasa-i dalam kitab 'Amalul Yaum wal Lailah (no. 9, halaman 138), Ibnus Sunni (no. 70). Syaikh 'Abdul 'Aziz bin 'Abdullah bin Baaz menyatakan bahwa sanad hadits Abu Dawud dan an-Nasa-i adalah hasan. Lihat juga Tuhfatul Akhyaar (halaman 23).">[6]</span>
                 </p>
@@ -232,8 +258,8 @@
                     pendengaranku (dari penyakit dan maksiat atau sesuatu yang tidak aku inginkan). Ya Allah, selamatkan
                     penglihatanku. Tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau. Ya Allah,
                     sesungguhnya aku berlindung kepada-Mu dari kekufuran dan kefakiran. Aku berlindung kepada-Mu dari
-                    siksa kubur. Tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau.” (Dibaca 3x) <span
-                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                    siksa kubur. Tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau.” <b>(Dibaca 3x)</b>
+                    <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
                         data-ref="HR. Abu Dawud (IV/324), Ahmad (V/42), an-Nasa-i dalam 'Amalul Yaum wal Lailah (no. 22, halaman 146), Ibnus Sunni (no. 69), dan al-Bukhari dalam al-Adabul Mufrad. Syaikh 'Abdul 'Aziz bin Baaz menyatakan sanad hadits tersebut hasan. Lihat juga Tuhfatul Akhyaar (halaman 26).">[8]</span>
                 </p>
             </article>
@@ -243,8 +269,9 @@
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Allah-lah yang mencukupi (segala kebutuhanku), Tidak ada Ilah yang berhak diibadahi dengan benar
-                    selain Dia, kepada-Nya aku bertawakkal. Dia-lah Rabb (yang menguasai) ‘Arsy yang agung.” (Dibaca
-                    7x)<span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                    selain Dia, kepada-Nya aku bertawakkal. Dia-lah Rabb (yang menguasai) ‘Arsy yang agung.” <b>(Dibaca
+                        7x)</b><span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline"
+                        data-id="8"
                         data-ref="HR. Ibnus Sunni dalam kitab 'Amalul Yaum wal Lailah (no. 71), Abu Dawud (IV/321). Syu'aib dan Abdul Qadir al-Arnauth berpendapat, “Isnad hadits tersebut shahih.” Lihat Zaadul Ma'aad (II/376).">[9]</span>
                 </p>
             </article>
@@ -268,7 +295,8 @@
             </article>
             <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
-                    اللّٰهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ،فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ وَمَلِيْكَهُ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا
+                    اللّٰهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ،فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ
+                    وَمَلِيْكَهُ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا
                     أَنْتَ، أَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ
                     عَلَىٰ نَفْسِيْ سُوۤءًا أَوْ أَجُرَّهُ إِلَىٰ مُسْلِمٍ.
                 </p>
@@ -289,7 +317,7 @@
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Dengan nama Allah yang bila disebut, segala sesuatu di bumi dan langit tidak akan berbahaya,
-                    Dia-lah Yang Maha Mendengar, Maha Mengetahui.” (Dibaca 3x)<span
+                    Dia-lah Yang Maha Mendengar, Maha Mengetahui.” <b>(Dibaca 3x)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
                         data-ref="HR. Abu Dawud dan at-Tirmidzi. Lihat Shahiih Ibni Majah (II/332).">[12]</span>
                 </p>
@@ -301,7 +329,7 @@
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Aku rela Allah sebagai Rabb, Islam sebagai agama, dan Muhammad ﷺ sebagai Nabi (yang diutus oleh
-                    Allah).” (Dibaca 3x).<span
+                    Allah).” <b>(Dibaca 3x)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
                         data-ref="HR. Ahmad (IV/337), an-Nasa-i dalam 'Amalul Yaum wal Lailah (no. 4), Ibnu Sunni (no. 68), Abu Dawud (IV/418), dan at-Tirmidzi (V/465). Syaikh Ibnu Baaz berpendapat, 'Hadits tersebut hasan.' dalam Tuhfatul Akhyaar (hal. 39).">[13]</span>
                 </p>
@@ -353,7 +381,7 @@
                     سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ
                 </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    “Mahasuci Allah, aku memuji-Nya." (Dibaca 100x)”<span
+                    “Mahasuci Allah, aku memuji-Nya." <b>(Dibaca 100x)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="16"
                         data-ref="HR. Muslim (IV/2071).">[17]</span>
                 </p>
@@ -375,7 +403,7 @@
                     كَلِمَاتِهِ.</p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Mahasuci Allah, aku memuji-Nya sebanyak makhluk-Nya, sejauh kerelaan-Nya, seberat timbangan
-                    'Arsy-Nya, dan sebanyak tinta tulisan kalimat-Nya.” (Dibaca 3x).<span
+                    'Arsy-Nya, dan sebanyak tinta tulisan kalimat-Nya.” <b>(Dibaca 3x)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="19"
                         data-ref="HR. Muslim (IV/2090).">[19]</span>
                 </p>
@@ -394,7 +422,7 @@
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
                     أَسْتَغْفِرُ اللّٰهَ وَأَتُوْبُ إِلَيْهِ.</p>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    “Aku memohon ampun kepada Allah dan bertaubat kepada-Nya.” (Dibaca 100x dalam sehari).<span
+                    “Aku memohon ampun kepada Allah dan bertaubat kepada-Nya.” <b>(Dibaca 100x dalam sehari)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="22"
                         data-ref="HR. Al-Bukhari dalam Fat-hul Baari (XI/101) dan Muslim (IV/2075).">[22]</span>
                 </p>
@@ -403,17 +431,325 @@
                 <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
                     اللّٰهُمَّ صَلِّ وَسَلِّمْ عَلَىٰ نَبِيِّنَا مُحَمَّدٍ.</p>
                 <p class="text-sm text-slate-600 leading-relaxed">
-                    “Ya Allah, limpahkanlah shalawat dan salam kepada Nabi kami Muhammad.” (Dibaca 10x).<span
+                    “Ya Allah, limpahkanlah shalawat dan salam kepada Nabi kami Muhammad.” <b>(Dibaca 10x)</b><span
                         class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="23"
                         data-ref="“Barangsiapa bershalawat untukku sepuluh kali pada pagi hari, dan sepuluh kali pada sore hari, maka ia mendapat syafa'atku pada hari Kiamat.” (HR. Ath-Thabrani melalui dua isnad, keduanya baik. Lihat Majma'uz Zawaaid (X/120) dan Shahiih at-Targhiib wat Tarhiib (I/273).">[23]</span>
                 </p>
             </article>
-            <div class="h-96"></div>
-            <div class="h-96"></div>
         </section>
 
         <section id="petang" class="content-section hidden">
-            <div class="text-center py-10 text-slate-500">Konten Dzikir Petang...</div>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَعُوْذُ بِاللهِ مِنَ الشَّيْطَانِ الرَّجِيْمِ </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Aku berlindung kepada Allah dari godaan syaitan yang terkutuk.”
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُ لَآ إِلٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُۥ
+                    مَا فِي السَّمٰوٰتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ ۚ
+                    يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِۦٓ إِلَّا
+                    بِمَاشَآءَ ۚ وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَالْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ
+                    الْعَلِيُّ الْعَظِيمُ۝٢٥٥
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Allah, tidak ada Ilah (yang berhak diibadahi dengan benar) melainkan Dia Yang Mahahidup, Yang
+                    terus-menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur. Milik-Nya apa yang di langit
+                    dan apa yang di bumi. Tidak ada yang dapat memberi syafa’at di sisi-Nya tanpa izin-Nya. Dia
+                    mengetahui apa yang di hadapan mereka dan di belakang mereka, dan mereka tidak mengetahui sesuatu
+                    pun tentang ilmu-Nya melainkan apa yang dikehendaki-Nya. Kursi-Nya meliputi langit dan bumi. Dan Dia
+                    tidak merasa berat memelihara keduanya, dan Dia Mahatinggi, Mahabesar.” (QS. Al-Baqarah: 255) </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </br>
+                    قُلْ هُوَ اللّٰهُ أَحَدٌ ۝١ اللّٰهُ الصَّمَدُ ۝٢ لَمْ يَلِدْوَلَمْ يُولَدْ ۝٣ وَلَمْ يَكُن لَّهُۥ
+                    كُفُوًا أَحَدٌۢ ۝٤
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah (Muhammad): ‘Dia-lah Allah, Yang Maha Esa. Allah Rabb yang bergantung kepada-Nya segala
+                    urusan. (Allah) tidak beranak dan tidak pula diperanakkan. Dan tidak ada sesuatu pun yang setara
+                    dengan Dia.’” (QS. Al-Ikhlas: 1-4) <b>(Dibaca 3x)</b> <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="1"
+                        data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[1]</span>
+                </p>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </br>
+                    قُلْ أَعُوذُ بِرَبِّ ٱلْفَلَقِ ۝١ مِن شَرِّ مَا خَلَقَ ۝٢ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ۝٣ وَمِن
+                    شَرِّ ٱلنَّفَّٰثَٰتِ فِى ٱلْعُقَدِ ۝٤ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ۝٥</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah: ‘Aku berlindung kepada Rabb Yang Menguasai shubuh, dari kejahatan makhluk-Nya, dan dari
+                    kejahatan malam apabila telah gelap gulita, dan dari kejahatan (wanita-wanita) tukang sihir yang
+                    meniup pada buhul-buhul (talinya), dan dari kejahatan orang dengki bila ia dengki.’” (QS. Al-Falaq:
+                    1-5) <b>(Dibaca 3x)</b> <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2"
+                        data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[2]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
+                    </br>
+                    قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ۝١ مَلِكِ ٱلنَّاسِ ۝٢ إِلَٰهِ ٱلنَّاسِ ۝٣ مِن شَرِّ ٱلْوَسْوَاسِ
+                    ٱلْخَنَّاسِ ۝٤ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ۝٥ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ۝٦</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Katakanlah: ‘Aku berlindung kepada Rabb manusia. Raja manusia. Sembahan manusia. Dari kejahatan
+                    (bisikan) syaitan yang bersembunyi, yang membisikkan (kejahatan) ke dalam dada manusia, dari
+                    (golongan) jin dan manusia.’” (QS. An-Naas: 1-6) <b>(Dibaca 3x)</b> <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="2"
+                        data-ref="HR. Abu Dawud (IV/322), at-Tirmidzi (V/567) dan lihat Shahiih at-Tirmidzi (III/182).">[2]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُلَا
+                    شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ كُلِّ شَيْءٍ قَدِيْرٌ. رَبِّ أَسْأَلُكَ
+                    خَيْرَ مَا فِيْ هَذِهِ اللَّيْلَةِ وَخَيْرَ مَا بَعْدَهُ، وَأَعُوْذُ بِكَ مِنْ شَرِّ مَا فِيْ هَذِهِ
+                    اللَّيْلَةِ وَشَرِّ مَا بَعْدَهُ، رَبِّ أَعُوْذُ بِكَ مِنَ الْكَسَلِ وَسُوۤءِ الْكِبَرِ، رَبِّ
+                    أَعُوْذُ بِكَ مِنْ عَذَابٍ فِي النَّارِ وَعَذَابٍ فِي الْقَبْرِ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Kami telah memasuki waktu sore dan kerajaan hanya milik Allah, segala puji bagi Allah. Tidak ada
+                    Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya. Bagi-Nya
+                    kerajaan dan bagi-Nya pujian. Dia-lah Yang Mahakuasa atas segala sesuatu. Ya Rabb-ku, aku mohon
+                    kepada-Mu kebaikan di malam ini dan kebaikan sesudahnya. Dan Aku berlindung kepada-Mu dari kejahatan
+                    malam ini dan kejahatan sesudahnya. Ya Rabb-ku, aku berlindung kepada-Mu dari kemalasan dan
+                    kejelekan
+                    di hari tua. Rabb-ku, aku berlindung kepada-Mu dari siksaan di Neraka dan siksaan di kubur.” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="3"
+                        data-ref="HR. Muslim (IV/2088).">[3]</span></p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ
+                    الْمَصِيْرُ.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, dengan rahmat dan pertolongan-Mu kami memasuki waktu pagi, dan dengan rahmat dan
+                    pertolongan-Mu kami memasuki waktu sore. Dengan rahmat dan pertolongan-Mu kami hidup dan dengan
+                    kehendak-Mu kami mati. Dan kepada-Mu tempat kembali (bagi semua makhluk).” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="4"
+                        data-ref="HR. At-Tirmidzi (V/466), lihat juga Shahiih at-Tirmidzi (III/142).">[4]</span></p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ أَنْتَ رَبِّيْ لَا إِلٰهَ إِلَّا أَنْتَ، خَلَقْتَنِيْ وَأَنَا عَبْدُكَ، وَأَنَا عَلَىٰ
+                    عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوْءُ لَكَ
+                    بِنِعْمَتِكَ عَلَيَّ، وَأَبُوْءُ بِذَنْبِيْ فَاغْفِرْ لِيْ فَإِنَّهُ لَا يَغْفِرُ الذُّنُوْبَ إِلَّا
+                    أَنْتَ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, Engkau adalah Rabb-ku, tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau,
+                    Engkau-lah yang menciptakan aku. Aku adalah hamba-Mu. Aku akan setia pada perjanjianku dengan-Mu
+                    semampuku. Aku berlindung kepada-Mu dari kejelekan yang kuperbuat. Aku mengakui nikmat-Mu kepadaku
+                    dan aku mengakui dosaku, oleh karena itu, ampunilah aku. Sesungguhnya tidak ada yang dapat
+                    mengampuni dosa kecuali Engkau.” <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="5"
+                        data-ref="HR. Al-Bukhari (VII/150).">[5]</span></p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ إِنِّيْ أَمْسَيْتُ أُشْهِدُكَ وَأُشْهِدُ حَمَلَةَ عَرْشِكَ، وَمَلَائِكَتَكَ وَجَمِيْعَ
+                    خَلْقِكَ، أَنَّكَ أَنْتَ اللّٰهُ لَا إِلٰهَ إِلَّا أَنْتَ وَحْدَكَ لَا شَرِيْكَ لَكَ، وَأَنَّ
+                    مُحَمَّدًا عَبْدُكَ وَرَسُوْلُكَ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, sesungguhnya aku di waktu sore ini mempersaksikan Engkau, Malaikat yang memikul ‘Arsy-Mu,
+                    Malaikat-Malaikat dan seluruh makhluk-Mu, bahwa sesungguhnya Engkau adalah Allah, tidak ada Ilah
+                    yang berhak diibadahi dengan benar selain Engkau semata, tidak ada sekutu bagi-Mu dan sesungguhnya
+                    Muhammad adalah hamba dan utusan-Mu.” <b>(Dibaca 4x)</b> <span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="6"
+                        data-ref="HR. Abu Dawud (IV/317), al-Bukhari dalam Adabul Mufrad (no. 1201), an-Nasa-i dalam kitab 'Amalul Yaum wal Lailah (no. 9, halaman 138), Ibnus Sunni (no. 70). Syaikh 'Abdul 'Aziz bin 'Abdullah bin Baaz menyatakan bahwa sanad hadits Abu Dawud dan an-Nasa-i adalah hasan. Lihat juga Tuhfatul Akhyaar (halaman 23).">[6]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ مَا أَمْسَى بِيْ مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِّنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لَا
+                    شَرِيْكَ لَكَ، فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, nikmat yang kuterima atau diterima oleh seseorang di antara makhluk-Mu di sore ini adalah
+                    dari-Mu semata, tidak ada sekutu bagi-Mu. Bagi-Mu segala puji dan kepada-Mu dipanjatkan (ungkapan)
+                    syukur.” <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline"
+                        data-id="7"
+                        data-ref="HR. Abu Dawud (IV/318), an-Nasa-i dalam kitab 'Amalul Yaum wal Lailah (no. 7, halaman 137), Ibnus Sunni (no. 41, halaman 23), Ibnu Hibban (Mawaarid, no. 2361). Syaikh 'Abdul 'Aziz bin Baaz menyatakan bahwa sanad hadits tersebut hasan, lihat Tuhfatul Akhyaar (halaman 24).">[7]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ عَافِنِيْ فِيْ بَدَنِيْ، اللّٰهُمَّ عَافِنِيْ فِيْ سَمْعِيْ، اللّٰهُمَّ عَافِنِيْ فِيْ
+                    بَصَرِيْ، لَا إِلٰهَ إِلَّا أَنْتَ. اللّٰهُمَّ إِنِّيْ أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ،
+                    وَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، لَا إِلٰهَ إِلَّا أَنْتَ. </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, selamatkan tubuhku (dari penyakit dan yang tidak aku inginkan). Ya Allah, selamatkan
+                    pendengaranku (dari penyakit dan maksiat atau sesuatu yang tidak aku inginkan). Ya Allah, selamatkan
+                    penglihatanku. Tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau. Ya Allah,
+                    sesungguhnya aku berlindung kepada-Mu dari kekufuran dan kefakiran. Aku berlindung kepada-Mu dari
+                    siksa kubur. Tidak ada Ilah yang berhak diibadahi dengan benar selain Engkau.” <b>(Dibaca 3x)</b>
+                    <span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Abu Dawud (IV/324), Ahmad (V/42), an-Nasa-i dalam 'Amalul Yaum wal Lailah (no. 22, halaman 146), Ibnus Sunni (no. 69), dan al-Bukhari dalam al-Adabul Mufrad. Syaikh 'Abdul 'Aziz bin Baaz menyatakan sanad hadits tersebut hasan. Lihat juga Tuhfatul Akhyaar (halaman 26).">[8]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    حَسْبِيَ اللّٰهُ لَا إِلٰهَ إِلَّا هُوَ ۖ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيْمِ
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Allah-lah yang mencukupi (segala kebutuhanku), Tidak ada Ilah yang berhak diibadahi dengan benar
+                    selain Dia, kepada-Nya aku bertawakkal. Dia-lah Rabb (yang menguasai) ‘Arsy yang agung.” <b>(Dibaca
+                        7x)</b><span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline"
+                        data-id="8"
+                        data-ref="HR. Ibnus Sunni dalam kitab 'Amalul Yaum wal Lailah (no. 71), Abu Dawud (IV/321). Syu'aib dan Abdul Qadir al-Arnauth berpendapat, “Isnad hadits tersebut shahih.” Lihat Zaadul Ma'aad (II/376).">[9]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ، اللّٰهُمَّ
+                    إِنِّيْ أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِيْ دِيْنِيْ وَدُنْيَايَ وَأَهْلِيْ وَمَالِيْ،
+                    اللّٰهُمَّ اسْتُرْ عَوْرَاتِيْ وَآمِنْ رَوْعَاتِيْ، اللّٰهُمَّ احْفَظْنِيْ مِنْ بَيْنِ يَدَيَّ،
+                    وَمِنْ خَلْفِيْ، وَعَنْ يَمِيْنِيْ، وَعَنْشِمَالِيْ، وَمِنْ فَوْقِيْ، وَأَعُوْذُ بِعَظَمَتِكَ أَنْ
+                    أُغْتَالَ مِنْ تَحْتِيْ.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, sesungguhnya aku memohon kebajikan dan keselamatan di dunia dan akhirat. Ya Allah,
+                    sesungguhnya aku memohon kebajikan dan keselamatan dalam agama, dunia, keluarga dan hartaku. Ya
+                    Allah, tutupilah auratku (aib dan sesuatu yang tidak layak dilihat orang) dan tenteramkanlah aku
+                    dari rasa takut. Ya Allah, peliharalah aku dari depan, belakang, kanan, kiri dan atasku. Aku
+                    berlindung dengan kebesaran-Mu, agar aku tidak disambar dari bawahku (oleh ular atau bumi pecah yang
+                    membuat aku jatuh dan lain-lain).”<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Abu Dawud dan Ibnu Majah. Lihat Shahiih Ibni Majah (II/332).">[10]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ،فَاطِرَ السَّمَاوَاتِ وَالْأَرْضِ، رَبَّ كُلِّ شَيْءٍ
+                    وَمَلِيْكَهُ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا
+                    أَنْتَ، أَعُوْذُ بِكَ مِنْ شَرِّ نَفْسِيْ، وَمِنْ شَرِّ الشَّيْطَانِ وَشِرْكِهِ، وَأَنْ أَقْتَرِفَ
+                    عَلَىٰ نَفْسِيْ سُوۤءًا أَوْ أَجُرَّهُ إِلَىٰ مُسْلِمٍ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, Yang Maha Mengetahui yang ghaib dan yang nyata, wahai Rabb pencipta langit dan bumi, Rabb
+                    segala sesuatu dan yang merajainya. Aku bersaksi bahwa tidak ada Ilah yang berhak diibadahi dengan
+                    benar selain Engkau. Aku berlindung kepada-Mu dari kejahatan diriku, syaitan dan balatentaranya, dan
+                    aku (berlindung kepada-Mu) dari berbuat kejelekan terhadap diriku atau menyeretnya kepada seorang
+                    muslim.”<span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline"
+                        data-id="8"
+                        data-ref="HR. At-Tirmidzi dan Abu Dawud. Lihat Shahiih at-Tirmidzi (III/142).">[11]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    بِسْمِ اللّٰهِ الَّذِيْ لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ
+                    السَّمِيْعُ الْعَلِيْمُ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Dengan nama Allah yang bila disebut, segala sesuatu di bumi dan langit tidak akan berbahaya,
+                    Dia-lah Yang Maha Mendengar, Maha Mengetahui.” <b>(Dibaca 3x)</b><span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Abu Dawud dan at-Tirmidzi. Lihat Shahiih Ibni Majah (II/332).">[12]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    رَضِيْتُ بِاللّٰهِ رَبًّا، وَبِالْإِسْلَامِ دِيْنًا، وَبِمُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ
+                    نَبِيًّا.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Aku rela Allah sebagai Rabb, Islam sebagai agama, dan Muhammad ﷺ sebagai Nabi (yang diutus oleh
+                    Allah).” <b>(Dibaca 3x)</b><span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Ahmad (IV/337), an-Nasa-i dalam 'Amalul Yaum wal Lailah (no. 4), Ibnu Sunni (no. 68), Abu Dawud (IV/418), dan at-Tirmidzi (V/465). Syaikh Ibnu Baaz berpendapat, 'Hadits tersebut hasan.' dalam Tuhfatul Akhyaar (hal. 39).">[13]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    يَا حَيُّ يَا قَيُّوْمُ بِرَحْمَتِكَ أَسْتَغِيْثُ، أَصْلِحْ لِيْ شَأْنِيْ كُلَّهُ وَلَا تَكِلْنِيْ
+                    إِلَىٰ نَفْسِيْ طَرْفَةَ عَيْنٍ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Wahai Rabb Yang Mahahidup, wahai Rabb Yang Berdiri Sendiri (tidak butuh segala sesuatu), dengan
+                    rahmat-Mu aku mohon pertolongan, perbaikilah segala urusanku dan jangan diserahkan kepadaku
+                    sekalipun sekejap mata (tanpa mendapat pertolongan dari-Mu).”<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="8"
+                        data-ref="HR. Al-Hakim, menurut pendapatnya, hadits tersebut shahih dan Imam adz-Dzahabi menyetujuinya. Lihat kitabnya (I/545) dan Shahiih Targhib wat Tarhib (I/273).">[14]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِيْنَ، اللّٰهُمَّ إِنِّيْ أَسْأَلُكَ خَيْرَ
+                    هَذِهِ اللَّيْلَةِ: فَتْحَهُ، وَنَصْرَهُ، وَنُوْرَهُ، وَبَرَكَتَهُ، وَهُدَاهُ، وَأَعُوْذُ بِكَ مِنْ
+                    شَرِّ مَا فِيْهِ وَشَرِّ مَا بَعْدَهُ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Kami memasuki waktu sore, sedang kerajaan hanya milik Allah, Rabb seluruh alam. Ya Allah,
+                    sesungguhnya aku memohon kepada-Mu agar memperoleh kebaikan, pembuka (rahmat), pertolongan, cahaya,
+                    berkah, dan petunjuk di hari ini. Aku berlindung kepada-Mu dari kejelekan apa yang ada di dalamnya
+                    dan kejahatan sesudahnya.”<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="15"
+                        data-ref="HR. Abu Dawud (IV/322), serta Syu'aib dan 'Abdul Qadir al-Arnauth dalam tahqiq Zaadul Ma'aad (II/273).">[15]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَمْسَيْنَا عَلَىٰ فِطْرَةِ الْإِسْلَامِوَعَلَىٰ كَلِمَةِ الْإِخْلَاصِ، وَعَلَىٰ دِيْنِ نَبِيِّنَا
+                    مُحَمَّدٍ صَلَّى اللّٰهُ عَلَيْهِ وَسَلَّمَ، وَعَلَىٰ مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ، حَنِيْفًا
+                    مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Di waktu sore kami memegang agama Islam, kalimat ikhlas, agama Nabi kami Muhammad ﷺ, dan agama ayah
+                    kami Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang
+                    musyrik.”<span class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline"
+                        data-id="16"
+                        data-ref="HR. Ahmad (III/406-407), (V/123), lihat juga Shahiihul Jaami' (IV/209), Ibnus Sunni juga meriwayatkannya di 'Amalul Yaum wal Lailah (no. 34).">[16]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    سُبْحَانَ اللّٰهِ وَبِحَمْدِهِ
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Mahasuci Allah, aku memuji-Nya." <b>(Dibaca 100x)</b>”<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="16"
+                        data-ref="HR. Muslim (IV/2071).">[17]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىٰ
+                    كُلِّ شَيْءٍ قَدِيْرٌ. </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Tidak ada Ilah yang berhak diibadahi dengan benar selain Allah semata, tidak ada sekutu bagi-Nya.
+                    Bagi-Nya kerajaan dan segala pujian. Dia-lah yang berkuasa atas segala sesuatu.” <b>(Dibaca 10x atau
+                        1x dalam keadaan malas)</b>.<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="18"
+                        data-ref="HR. Al-Bukhari (IV/95) dan Muslim (IV/2071).">[18]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    أَعُوْذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ.
+                </p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk yang
+                    diciptakan-Nya.” <b>(Dibaca 3x)</b><span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="19"
+                        data-ref="HR. Ahmad 2: 290. Syaikh Syu’aib Al Arnauth mengatakan bahwa sanad hadits ini shahih sesuai syarat Muslim. Lihat komentar Syaikh Syu’aib Al Arnauth terhadap hadits ini untuk pengertian hummah diartikan dengan racun atau sengatan kalajengking.">[19]</span>
+                </p>
+            </article>
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <p dir="rtl" class="font-arab text-right text-2xl leading-loose text-slate-900 mb-4">
+                    اللّٰهُمَّ صَلِّ وَسَلِّمْ عَلَىٰ نَبِيِّنَا مُحَمَّدٍ.</p>
+                <p class="text-sm text-slate-600 leading-relaxed">
+                    “Ya Allah, limpahkanlah shalawat dan salam kepada Nabi kami Muhammad.” <b>(Dibaca 10x)</b>.<span
+                        class="citation-trigger text-red-500 font-bold cursor-pointer hover:underline" data-id="23"
+                        data-ref="“Barangsiapa bershalawat untukku sepuluh kali pada pagi hari, dan sepuluh kali pada sore hari, maka ia mendapat syafa'atku pada hari Kiamat.” (HR. Ath-Thabrani melalui dua isnad, keduanya baik. Lihat Majma'uz Zawaaid (X/120) dan Shahiih at-Targhiib wat Tarhiib (I/273).">[23]</span>
+                </p>
+            </article>
         </section>
 
         <section id="solat" class="content-section hidden">
@@ -517,7 +853,8 @@
                     السَّمَاوَاتِ وَمَا فِي الأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلاَّ بِإِذْنِهِ يَعْلَمُ مَا
                     بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلاَ يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلاَّ بِمَا شَاء
                     وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالأَرْضَ وَلاَ يَؤُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ
-                    ۝٢٥٥</p>
+                    ۝٢٥٥
+                </p>
                 <p class="text-sm text-slate-600 leading-relaxed">
                     “Allah, tidak ada Ilah (yang berhak diibadahi dengan benar) melainkan Dia Yang Mahahidup, Yang
                     terus-menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur. Milik-Nya apa yang di langit
@@ -559,8 +896,114 @@
             <div class="h-96"></div>
         </section>
 
-        <section id="keutamaan" class="content-section hidden">
-            <div class="text-center py-10 text-slate-500">Konten Keutamaan Dzikir...</div>
+        <section id="tentang" class="content-section hidden">
+            <div class="bg-blue-50 rounded-xl p-6 mb-6 text-center border border-blue-100">
+                <h2 class="text-xl font-bold text-blue-800 mb-2">Aplikasi Dzikir Pagi & Petang</h2>
+                <p class="text-sm text-slate-600 mb-4">
+                    Aplikasi web ringan untuk mempermudah rutinitas ibadah harian Anda. Didesain bersih, cepat, dan
+                    mudah digunakan.
+                </p>
+                <a href="https://github.com/fahmimbps/dzikir.git" target="_blank"
+                    class="inline-block bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-blue-700 transition">
+                    <i class="fas fa-link mr-1"></i> Github Repository
+                </a>
+            </div>
+
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2 flex items-center">
+                    <i class="fas fa-book text-blue-500 mr-2"></i> Sumber Rujukan
+                </h3>
+                <p class="text-sm text-slate-600 mb-4 leading-relaxed">
+                    Konten dzikir merujuk pada buku saku <strong>"Dzikir Pagi & Petang dan Sesudah Shalat
+                        Fardhu"</strong> karya <strong>Syaikh Sa'id bin 'Ali bin Wahf al-Qahthani</strong> (Pustaka Ibnu
+                    Umar).
+                </p>
+
+                <div class="flex justify-center gap-4 mb-6">
+                    <img src="sampul-depan.png" alt="Dzikir Pagi & Petang"
+                        class="w-32 rounded shadow-md border border-gray-100 object-cover">
+                    <img src="sampul-belakang.png" alt="Dzikir Pagi & Petang"
+                        class="w-32 rounded shadow-md border border-gray-100 object-cover">
+                </div>
+
+                <blockquote class="bg-gray-50 border-l-4 border-blue-400 p-4 italic text-xs text-slate-600 rounded-r">
+                    "Kami memohon kepada Allah Yang Maha Mulia lagi Maha Agung... semoga menjadikan penyusunan buku ini
+                    ikhlas karena-Nya..."
+                </blockquote>
+            </article>
+
+            <article class="bg-white rounded-xl shadow-sm border border-gray-200 p-5 mb-4">
+                <h3 class="text-lg font-bold text-slate-800 mb-4 border-b pb-2 flex items-center">
+                    <i class="fas fa-star text-yellow-500 mr-2"></i> Fitur Utama
+                </h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xs"></i>
+                        <div class="text-sm text-slate-700">
+                            <span class="font-bold block text-slate-900">Mode Fokus & Sticky Header</span>
+                            Navigasi tetap terlihat saat menggulir.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xs"></i>
+                        <div class="text-sm text-slate-700">
+                            <span class="font-bold block text-slate-900">Reading Progress Bar</span>
+                            Indikator kemajuan bacaan Anda.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xs"></i>
+                        <div class="text-sm text-slate-700">
+                            <span class="font-bold block text-slate-900">Sitasi Interaktif</span>
+                            Klik nomor rujukan untuk melihat detail hadits.
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-xs"></i>
+                        <div class="text-sm text-slate-700">
+                            <span class="font-bold block text-slate-900">Ringan (SPA)</span>
+                            Tanpa loading berlebih, hemat kuota.
+                        </div>
+                    </li>
+                </ul>
+            </article>
+
+            <div class="space-y-2">
+                <details class="group bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <summary
+                        class="flex justify-between items-center font-medium cursor-pointer list-none p-4 text-slate-700 text-sm hover:bg-gray-50">
+                        <span><i class="fas fa-code text-slate-400 mr-2"></i> Informasi Teknis</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-xs text-slate-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 text-sm border-t border-gray-100 p-4 bg-slate-50">
+                        <p class="mb-2 font-bold">Teknologi:</p>
+                        <ul class="list-disc list-inside mb-4 pl-2 space-y-1 text-xs">
+                            <li>HTML5 (Semantik)</li>
+                            <li>Tailwind CSS (CDN)</li>
+                            <li>Vanilla JavaScript</li>
+                            <li>Google Fonts (Amiri & Inter)</li>
+                        </ul>
+
+                        <p class="mb-2 font-bold">Cara Menjalankan (Lokal):</p>
+                        <div class="bg-gray-800 text-gray-200 p-3 rounded text-xs font-mono overflow-x-auto">
+                            git clone https://github.com/fahmimbps/dzikir.git<br>
+                            cd dzikir<br>
+                            # Buka index.html di browser
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <div class="text-center mt-8 mb-4">
+                <p class="text-xs text-slate-400">
+                    Lisensi Open Source.<br>
+                    Dibuat dengan ❤️ untuk kemudahan beribadah.
+                </p>
+            </div>
+
+            <div class="h-20"></div>
         </section>
 
     </main>
@@ -603,33 +1046,43 @@
             'pagi': 'Dzikir Pagi',
             'petang': 'Dzikir Petang',
             'solat': 'Dzikir Sesudah Solat',
-            'keutamaan': 'Keutamaan Dzikir'
+            'tentang': 'Tentang Aplikasi'
         };
 
         const menuMap = {
             'pagi': 'btn-pagi',
             'petang': 'btn-petang',
             'solat': 'btn-solat',
-            'keutamaan': 'btn-keutamaan'
+            'tentang': 'btn-tentang'
         };
 
-        function switchPage(pageId) {
-            // 1. Sembunyikan semua konten halaman
+        function switchPage(pageId, isInitialLoad = false) {
+            // Sembunyikan semua section
             sections.forEach(sec => sec.classList.add('hidden'));
 
-            // 2. Tampilkan halaman yang dipilih
+            // Tampilkan section yang dipilih
             const activeSection = document.getElementById(pageId);
             if (activeSection) activeSection.classList.remove('hidden');
 
-            // 3. Update Judul Header
+            // Update Judul
             pageTitle.textContent = titles[pageId];
 
-            // 4. Update Tampilan Menu (Highlight Active)
+            // Update Highlight Menu
             updateMenuHighlight(pageId);
 
-            // 5. Reset Scroll & Tutup Menu
+            // Reset Scroll ke atas
             window.scrollTo(0, 0);
-            toggleMenu();
+
+            // LOGIKA BARU: Simpan status ke Local Storage
+            localStorage.setItem('lastPage', pageId);
+
+            // LOGIKA BARU: Jangan toggle menu jika ini adalah load awal (agar menu tidak tiba-tiba terbuka)
+            if (!isInitialLoad) {
+                // Cek apakah menu sedang terbuka, jika ya baru tutup
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            }
         }
 
         function updateMenuHighlight(activePageId) {
@@ -653,6 +1106,28 @@
                 }
             });
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Ambil jam saat ini (0 - 23)
+            const currentHour = new Date().getHours();
+
+            let defaultPage = 'pagi';
+
+            // Jika jam 3 sore (15.00) ke atas, otomatis ke Petang
+            if (currentHour >= 15) {
+                defaultPage = 'petang';
+            }
+
+            // Opsional: Tetap cek localStorage jika user sedang baca 'solat' atau 'tentang'
+            // karena halaman itu tidak terikat waktu.
+            const lastPage = localStorage.getItem('lastPage');
+            if (lastPage === 'solat' || lastPage === 'tentang') {
+                defaultPage = lastPage;
+            }
+
+            switchPage(defaultPage, true);
+        });
+
         // --- 3. Logic Reading Progress Bar ---
         window.onscroll = function () {
             const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -695,6 +1170,15 @@
 
         closeModal.addEventListener('click', hideModal);
         modalBackdrop.addEventListener('click', hideModal);
+
+        // Registrasi Service Worker untuk PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => console.log('Service Worker registered!', reg))
+                    .catch(err => console.log('Service Worker registration failed:', err));
+            });
+        }
     </script>
 </body>
 
